@@ -53,7 +53,7 @@ def is_match(first, second, comparison=None):
         COMPARISON_EXACT: lambda: first == second,
         COMPARISON_IEXACT: lambda: first.lower() == second.lower(),
         COMPARISON_CONTAINS: lambda: second in first,
-        COMPARISON_ICONTAINS: lambda: second.lower() in first.lower(),
+        COMPARISON_ICONTAINS: lambda: str(second).lower() in str(first).lower(),
         COMPARISON_GT: lambda: first > second,
         COMPARISON_GTE: lambda: first >= second,
         COMPARISON_LT: lambda: first < second,
